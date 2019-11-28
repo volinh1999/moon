@@ -29,3 +29,26 @@ $("#fromRegister").on('submit', function (e) {
         }); 
     }
 });
+
+
+// clicktabmenu
+$('.find-zero').click(function(){
+    $('html, body').animate({
+        scrollTop: $(".banner").offset().top }, 500); 
+})
+$('.find-one').click(function(){
+    $('html, body').animate({
+        scrollTop: $("#intro").offset().top }, 500); 
+})
+$('.find-two').click(function(){
+    $('html, body').animate({
+        scrollTop: $("#isotope").offset().top }, 500); 
+})
+$('.find-three').click(function(){
+    $('html, body').animate({
+        scrollTop: $("#tagline").offset().top }, 500); 
+})
+$('.find-four').click(function(){
+    $('html, body').animate({
+        scrollTop: $("#footer").offset().top }, 500); 
+})
