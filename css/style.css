@@ -1,6 +1,4 @@
 body {
-    /* background: #eaeae9; */
-    background: url(../images/Layer\ 0.jpg);
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
@@ -31,7 +29,8 @@ body {
     top: 0px;
 }
 li.nav-item {
-    margin-right: 1.7em;
+    margin-right: 0.8em;
+    margin-left: 0.8em;
 }
 a.navbar-brand {
     width: 150px;
@@ -67,10 +66,10 @@ li.nav-item:last-child {
     outline: none;
 }
 .carousel-control-prev-icon {
-    background-image: url(../images/Vector\ Smart\ Object.png);
+    background-image: url(../images/prev.png);
 }
 .carousel-control-next-icon {
-    background-image: url(../images/Vector\ Smart\ Object-2.png);
+    background-image: url(../images/next.png);
 }
 .carousel-control-next-icon, .carousel-control-prev-icon {
     width: 30px;
@@ -124,11 +123,6 @@ li.nav-item:last-child {
 
 
 /* library */
-/* button.btn.btn-controls:after {
-    border-right: 2px solid #000;
-    content: '';
-    padding-left: 25px;
-} */
 .tittle-project {
     padding: 40px 0px;
 }
@@ -150,9 +144,6 @@ li.nav-item:last-child {
     font-weight: 700;
     font-size: 24px;
 }
-div#pills-profile {
-    padding: 85px 0px;
-}
 .eee {
     align-self: flex-end;
     padding: 0;
@@ -172,6 +163,26 @@ div#pills-profile {
     font-weight: 700;
     color: #a12b15;
     border: 2px solid #a12b15;
+}
+#isotope {
+    background: #eaeae9;
+    position: relative;
+}
+.isotope-gird {
+    position: relative;
+}
+.isotope-gird {
+    padding-bottom: 40px;
+}
+.line1 {
+    position: absolute;
+    right: 0;
+    width: 400px;
+}
+.line2 {
+    position: absolute;
+    bottom: 0;
+    left: -140px;
 }
 .title-box-isotope {
     max-width: 230px;
@@ -312,7 +323,7 @@ button.btn.btn-controls {
 
 /* footer */
 .contact {
-    background: #eaeaea;
+    background: #eaeae9;
     padding: 40px 0px;
 }
 .loogo-footer {
@@ -379,8 +390,21 @@ button.btn.btn-controls:last-child:after {
     background: none;
 }
 
+.content a {
+    color: #000;
+    text-decoration: none;
+}
 
-
+.sl-overlay {
+    background: #835f3b;
+    opacity: 0.9;
+}
+.fa-chevron-left:before {
+    color: #fff;
+}
+.fa-chevron-right:before {
+    color: #fff;
+}
 
 .icon {
     position: absolute;
@@ -404,13 +428,44 @@ button.btn.btn-controls:last-child:after {
     font-weight: 700;
 }
 
+.navbar-brand{
+    transition: all .3s ease; 
+}
+.scroll-logo{
+    transition: all .3s ease;
+    transform: scale(0.7);
+}
+.menu{
+    transition: all .7s ease;
+}
+.menu-scroll{
+    height: 100px;
+    transition: all .7s ease;
+    transform: scaleY(0.9);
+    margin-top: -5px;
+}
+.navbar-light-scroll{
+    transform: translateY(-20px);
+}
 
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #fff;
+    font-weight: 600;
+    transition: all .5s ease;
+}
 
 
 @media only screen and (max-width: 768px) {
     /* menu */
-    
-    
+    .menu-scroll {
+        height: 60px;
+    }
+    .scroll-logo {
+        transform: scale(1);
+    }
+    .navbar-light-scroll {
+        transform: translateY(0);
+    }
     .navbar-light .navbar-brand {
         color: rgba(0,0,0,.9);
         width: 55px;
@@ -445,10 +500,6 @@ button.btn.btn-controls:last-child:after {
         font-size: 12px;
     }
     /* library */
-    .sl-caption p {
-        font-size: 15px;
-    }
-    
     .none-mobile {
         display: none;
     }
@@ -463,15 +514,11 @@ button.btn.btn-controls:last-child:after {
         padding: 0px 15px;
     }
     .content-project ul {
-        /* transform: translate(4%,-4%); */
         flex-wrap: nowrap;
     }
     .item-right {
         margin-top: 10px;
     }
-    /* .content-project li {
-        margin-bottom: 10px;
-    } */
     .txt-1 {
         font-size: 14px;
     }
@@ -510,5 +557,19 @@ button.btn.btn-controls:last-child:after {
     }
     .lienhe p {
         font-size: 12px;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .sl-wrapper .sl-navigation button.sl-prev {
+        left: 3%;
+    }.sl-wrapper .sl-navigation button.sl-next {
+        right: 3%;
+    }
+}
+@media only screen and (max-width: 1440px) and (min-width: 1280px) {
+    .sl-wrapper .sl-navigation button.sl-prev {
+        left: 5%;
+    }.sl-wrapper .sl-navigation button.sl-next {
+        right: 5%;
     }
 }
